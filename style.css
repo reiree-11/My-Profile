@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #F6EDDF;
+    color: #503B1B;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+
+header {
+    background: linear-gradient(120deg, #9A8565 0%, #8A7554 50%, #675437 100%);
+    color: #F6EDDF;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 4px solid #DED4C4;
+}
+
+header h1 {
+    font-size: 2.75rem;
+    letter-spacing: 0.15rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    margin-top: 0;
+}
+
+header p {
+    font-size: 1.125rem;
+    color: #F6EDDF;
+}
+
+/* Navigation */
+
+nav {
+    margin-top: 1.5rem;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #F6EDDF;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #DED4C4;
+    border-radius: 999px;
+    padding: 0.4rem 1.1rem;
+    margin: 0.3rem 0.4rem;
+}
+
+nav a:hover {
+    background-color: #F6EDDF;
+    color: #402907;
+}
+
+/* Headings */
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #402907;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: #F6EDDF;
+    border-bottom: 2px solid #DED4C4;
+    padding-bottom: 0.4rem;
+}
+
+/* Sections and Box Model */
+
+section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 2px solid #9A8565;
+    border-radius: 12px;
+    background-color: #DED4C4;
+}
+
+/* About Me */
+
+.top-section {
+    margin: 2rem 0;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.photo-placeholder {
+    flex-shrink: 0;
+    width: 250px;
+    height: 280px;
+    border-radius: 24px;
+    border: 3px solid #9A8565;
+    padding: 3px;
+    overflow: hidden;
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+.bio {
+    flex: 1;
+    min-width: 0;
+    text-align: justify;
+}
+
+/* Things I Love */
+
+.love-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.love-section .card {
+    flex: 1 1 28%;
+    text-align: center;
+}
+
+/* Passion Projects */
+
+.card {
+    background-color: #9A8565;
+    color: #F6EDDF;
+    border: 1px solid #675437;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+#projects article {
+    margin-bottom: 1.5rem;
+}
+
+#projects a {
+    color: #F6EDDF;
+    font-weight: bold;
+}
+
+#projects video {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    max-height: 420px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-top: 1rem;
+    background-color: #402907;
+}
+
+/* Contact */
+
+#contact {
+    margin-bottom: 2rem;
+}
+
+#contact a {
+    color: #402907;
+    font-weight: bold;
+}
+
+/* Things I Love and Contact Me side by side */
+
+.bottom-sections {
+    display: flex;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.bottom-sections section {
+    flex: 1;
+    margin: 1rem 0;
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 600px) {
+
+    .bottom-sections {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        margin: 0.25rem;
+        padding: 0.4rem 0.75rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .photo-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    .love-section .card {
+        flex-basis: 100%;
+    }
+
+    #projects article {
+        width: 100%;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
